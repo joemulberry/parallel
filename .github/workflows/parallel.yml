@@ -4,6 +4,9 @@ on:
   schedule:
     - cron: '5 * * * *'
 
+    # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
 jobs: 
   build:
     runs-on: ubuntu-latest
@@ -23,7 +26,7 @@ jobs:
           pip install -r requirements.txt
           
       - name: execute py script
-        run: python openseas_pull.py
+        run: python info_pull.py
 
       - name: commit files
         run: |
