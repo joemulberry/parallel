@@ -1,4 +1,4 @@
-name: parallel
+name: openseas_card_pull
 
 on: 
   schedule:
