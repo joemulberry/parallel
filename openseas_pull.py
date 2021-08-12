@@ -1,13 +1,10 @@
 import requests
 import json
 
-
 call_offsets = ['0', '50', '100', '150', '200']
-
 dicts = []
 
 for call_offset in call_offsets:
-
   url = "https://api.opensea.io/api/v1/assets"
   querystring = {"asset_contract_address": "0x76be3b62873462d2142405439777e971754e8e77",
                  "order_direction": "asc", "offset": call_offset, "limit": "50"}
@@ -17,10 +14,3 @@ for call_offset in call_offsets:
 
 with open('data/opensea_parallel_dumps.json', 'w') as fout:
     json.dump(dicts, fout)
-
-# # # initialize with a project key
-# deta = Deta("a0icf3jq_eMiFeK2zZSZuuzeCfpXsEyfxScovGvt4")
-
-# # create and use as many Drives as you want!
-# openseas = deta.Drive("openseas")
-# openseas.put("parallel_dumps.json", path="./parallel_dumps.json")
