@@ -1,7 +1,7 @@
 import requests
 import json
 
-call_offsets = ['0', '50', '100', '150', '200', '250', '300]
+call_offsets = ['0', '50', '100', '150', '200', '250', '300']
 dicts = []
 
 for call_offset in call_offsets:
