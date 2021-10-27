@@ -14,3 +14,5 @@ for call_offset in call_offsets:
 
 with open('data/opensea_parallel_dumps.json', 'w') as fout:
     json.dump(dicts, fout)
+    
+# TODO change name of json
